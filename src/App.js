@@ -37,7 +37,7 @@ div.answer {
 
 p#eight {
   font-size: 5em;
-  margin: 20% auto;
+  margin: 10% auto;
   color: white;
 }
 
