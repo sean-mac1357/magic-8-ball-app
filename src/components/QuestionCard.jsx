@@ -54,7 +54,9 @@ p#answer {
   margin: 10px;
   padding: 5px;
   width: 400px;
-  font-size:48px;
+  font-size: 48px;
+  text-transform: capitalize;
+  font-weight: Bold;
   color: red;
 }
 
@@ -75,7 +77,7 @@ const QuestionCard = (props) => {
                     <div id="content">
                         <CardHeader className='is-flex is-justify-content-center'>
                         <h1 id="question">
-                            {quest.magic.question}
+                            {quest.magic.question}⁇
                         </h1>
                         </CardHeader>
                         <div id="eight-ball" className="eight-ball">
