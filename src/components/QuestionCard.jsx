@@ -1,5 +1,7 @@
-import './App.css';
-import SearchForm from './components/SearchForm';
+import {
+    Card,
+    CardHeader,
+} from 'bloomer';
 import Styled from 'styled-components';
 
 const Div = Styled.div`
@@ -61,27 +63,31 @@ p#answer {
 }
 `
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>
-          Here Lies the Magic ⓼-Ball
-        </h1>
-      </header>
-      <Div>
-      <div id="content">
-        <SearchForm />
-          <div id="eight-ball" class="eight-ball">
-            <div class="answer">
-              <p id="eight">8</p>
-              <p id="answer"></p>
-            </div>
-          </div>
-        </div>
-      </Div>
-    </div>
-  );
+
+const QuestionCard = (props) => {
+    const { quest } = props;
+    console.log("quest is: ", quest)
+
+    return (
+        <li>
+                <Card>
+                    <Div>
+                    <div id="content">
+                        <CardHeader className='is-flex is-justify-content-center'>
+                        <h1 id="question">
+                            {quest.magic.question}
+                        </h1>
+                        </CardHeader>
+                        <div id="eight-ball" className="eight-ball">
+                        <div className="answer">
+                            <p id="answer">{quest.magic.answer}</p>
+                        </div>
+                        </div>
+                    </div>
+                    </Div>
+                </Card>
+        </li>
+    )
 }
 
-export default App;
+export default QuestionCard;
